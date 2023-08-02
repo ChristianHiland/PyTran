@@ -17,5 +17,11 @@ class Start:
       "Username": self.Username,
       "OS": self.OS
     }
-    with open(self.ConfigFile, "w") as Write:
-      json.dump(Layout, Write, indent=4)
+    if os.path.exists(self.ConfigFile) == False:
+      with open(self.ConfigFile, "w") as Write:
+        json.dump(Layout, Write, indent=4, ensure_ascii=False)
+    else:
+      print("Error: Sorry you aready ran this command!")
+    # Returns The Contents of the config file.
+    def Info(self):
+      pass
