@@ -15,8 +15,14 @@ class English:
             with open(self.JSONWhole, "r") as Tran:
                 Data = json.load(Tran)
                 print(Data['English'][Word])
-    def Write(self, Dict):
-        with open(self.JSONFile, "w") as Add:
-            Data = json.load(Add)
-            New = Data.update(Dict)
-            json.dump(New, Add, indent=4, ensure_ascii=False)
+    def Write(self, Dict, Whole):
+        if Whole.lower() == str("n"):
+            with open(self.JSONFile, "w") as Add:
+                Data = json.load(Add)
+                New = Data.update(Dict)
+                json.dump(New, Add, indent=4, ensure_ascii=False)
+        elif Whole.lower() == str("y"):
+            with open(self.JSONWhole, "w") as Add:
+                Data = json.load(Add)
+                New = Data.update(Dict)
+                json.dump(New, Add, indent=4, ensure_ascii=False)
