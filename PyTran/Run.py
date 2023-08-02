@@ -15,6 +15,7 @@ class Start:
     Layout = {
       "WorkFolder": self.HomeDIR,
       "Username": self.Username,
-      "OS": 
+      "OS": self.OS
     }
-    with open(self.ConfigFile, "w")
+    with open(self.ConfigFile, "w") as Write:
+      json.dump(Layout, Write, indent=4)
