@@ -2,10 +2,12 @@ import json
 import os
 
 class English:
+    # The Init
     def __init__(self):
         self.JSONFile = str("PyTran/EnglishSen.json")
         self.JSONWhole = str("PyTran/English.json")
         pass
+    # The Translate Func
     def Translate(self, Word, Whole):
         if Whole.lower() == str("n"):
             with open(self.JSONFile, "r") as Tran:
@@ -15,6 +17,7 @@ class English:
             with open(self.JSONWhole, "r") as Tran:
                 Data = json.load(Tran)
                 print(Data['English'][Word])
+    # The Writing Func
     def Write(self, Dict, Whole):
         if Whole.lower() == str("n"):
             with open(self.JSONFile, "w") as Add:
