@@ -1,4 +1,5 @@
-version = "0.0.1"
+Version = float(0.1)
+Release = int(1)
 
 # Importing modules
 from PyTran.English import English

@@ -1,7 +1,5 @@
-from PyTran import English
+from PyTran import English, Start
 
-EN = English()
+Runs = Start()
 
-Dict = {}
-
-EN.Write(Dict)
+Runs.First()
