@@ -15,11 +15,13 @@ class English:
         if Whole.lower() == str("n"):
             with open(self.JSONFile, "r") as Tran:
                 Data = json.load(Tran)
-                print(Data['EnglishSen'][Word])
+                Word = Word.lower()
+                print(Data[Word])
         elif Whole.lower() == str("y"):
             with open(self.JSONWhole, "r") as Tran:
                 Data = json.load(Tran)
-                print(Data['English'][Word])
+                Word = Word.lower()
+                print(Data[Word])
     def Write(self, Dict, Whole):
         """
         Leting the user add onto the in-build dictanry.
