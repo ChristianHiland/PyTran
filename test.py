@@ -1,5 +1,6 @@
-from PyTran import English, Start
+from PyTran import English
 
-Runs = Start()
+T = English()
 
-Runs.First()
+Dict = {"Hi": "Hello"}
+T.Write(Dict, "y")

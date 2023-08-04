@@ -20,12 +20,12 @@ class English:
     # The Writing Func
     def Write(self, Dict, Whole):
         if Whole.lower() == str("n"):
-            with open(self.JSONFile, "w") as Add:
+            with open(self.JSONFile, "r") as Add:
                 Data = json.load(Add)
-                New = Data.update(Dict)
-                json.dump(New, Add, indent=4, ensure_ascii=False)
+                #New = Data.update(Dict)
+                #json.dump(New, Add, indent=4, ensure_ascii=False)
         elif Whole.lower() == str("y"):
-            with open(self.JSONWhole, "w") as Add:
+            with open(self.JSONWhole, "r+") as Add:
                 Data = json.load(Add)
                 New = Data.update(Dict)
                 json.dump(New, Add, indent=4, ensure_ascii=False)

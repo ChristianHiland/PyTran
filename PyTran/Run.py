@@ -21,7 +21,7 @@ class Start:
       },
       "PyTran": {
         "Version": Version,
-        "DateRE": Release
+        "Release": Release
       }
     }
     if os.path.exists(self.ConfigFile) == False:
@@ -31,5 +31,12 @@ class Start:
     else:
       print("Error: Sorry you aready ran the First command!")
     # Returns The Contents of the config file.
-    def Info(self):
-      pass
+  def Info(self):
+      print("Do you want the 'System'? Do you want 'PyTran'?")
+      OP = input("PyTran/System: ")
+      if os.path.exists(self.ConfigFile) == True:
+        with open(self.ConfigFile, "r") as Read:
+          Data = json.load(Read)
+          print(Data[OP])
+      else:
+        print("Sorry, You don't have a Config file for PyTran")
