@@ -6,9 +6,12 @@ class English:
     def __init__(self):
         self.JSONFile = str("PyTran/EnglishSen.json")
         self.JSONWhole = str("PyTran/English.json")
-        pass
-    # The Translate Func
     def Translate(self, Word, Whole):
+        """
+        This will tranlate English into Korean. If the word is in the dictary!
+        Word: The English or Korean word.
+        Whole: N will just output the word.
+        """
         if Whole.lower() == str("n"):
             with open(self.JSONFile, "r") as Tran:
                 Data = json.load(Tran)
@@ -17,8 +20,12 @@ class English:
             with open(self.JSONWhole, "r") as Tran:
                 Data = json.load(Tran)
                 print(Data['English'][Word])
-    # The Writing Func
     def Write(self, Dict, Whole):
+        """
+        Leting the user add onto the in-build dictanry.
+        Y: For the English.json
+        N: For the EnglishSen.json
+        """
         if Whole.lower() == str("n"):
             with open(self.JSONFile) as Fp:
                 Data = json.load(Fp)
