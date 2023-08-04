@@ -1,3 +1,5 @@
+# TODO Make this the demo script.
+
 from PyTran import English
 
 T = English()
