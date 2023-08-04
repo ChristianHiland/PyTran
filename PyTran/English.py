@@ -16,12 +16,12 @@ class English:
             with open(self.JSONFile, "r") as Tran:
                 Data = json.load(Tran)
                 Word = Word.lower()
-                print(Data[Word])
+                return Data[Word]
         elif Whole.lower() == str("y"):
             with open(self.JSONWhole, "r") as Tran:
                 Data = json.load(Tran)
                 Word = Word.lower()
-                print(Data[Word])
+                return Data[Word]
     def Write(self, Dict, Whole):
         """
         Leting the user add onto the in-build dictanry.
@@ -34,9 +34,11 @@ class English:
                 Data.update(Dict)
                 with open(self.JSONFile, "r+") as Add:
                     json.dump(Data, Add, indent=4, ensure_ascii=False)
+            print("Writing to the JSON was done.")
         elif Whole.lower() == str("y"):
             with open(self.JSONWhole) as Fp:
                 Data = json.load(Fp)
                 Data.update(Dict)
                 with open(self.JSONWhole, "r+") as Add:
                     json.dump(Data, Add, indent=4, ensure_ascii=False)
+            print("Writing to the JSON was done.")
