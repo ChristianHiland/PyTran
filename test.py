@@ -2,5 +2,5 @@ from PyTran import English
 
 T = English()
 
-Dict = dict({"Hi": "Hello"})
+Dict = {"love": "사랑", "사랑": "love", "my": "내", "내": "my", "coding": "코딩", "코딩": "coding"}
 T.Write(Dict, "n")
