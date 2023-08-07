@@ -11,6 +11,10 @@ class Start:
     self.OS = platform.system()
     self.PyVer = platform.python_version()
     self.ConfigFile = str("PyTran/Config.json")
+    if os.path.exists(self.ConfigFile) == False:
+      self.First()
+    else:
+      pass
   # First Run
   def First(self):
     Layout = {
