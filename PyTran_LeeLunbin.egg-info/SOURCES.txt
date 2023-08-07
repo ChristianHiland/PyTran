@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+PyTran/English.py
+PyTran/Run.py
+PyTran/__init__.py
+PyTran_LeeLunbin.egg-info/PKG-INFO
+PyTran_LeeLunbin.egg-info/SOURCES.txt
+PyTran_LeeLunbin.egg-info/dependency_links.txt
+PyTran_LeeLunbin.egg-info/top_level.txt
